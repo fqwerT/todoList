@@ -1,0 +1,30 @@
+.inputPlus {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2%;
+    border: hidden;
+
+    &__input {
+        height: 25px;
+        border-radius: 12px;
+        padding: 5px;
+        font-family: 'Roboto';
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+    }
+
+    &__button {
+        width:40px;
+        height:40px;
+        &:hover {
+            transform:scale(1.4);
+            transition: 0.6s;            
+        }
+    }
+}

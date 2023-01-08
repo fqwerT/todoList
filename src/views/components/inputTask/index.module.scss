@@ -1,0 +1,113 @@
+.inputTask {
+  width: 100%;
+  margin: 15px;
+  text-align: left;
+  border-radius: 8px;
+  background: hsl(0, 0%, 100%);
+  padding: 8px 24px;
+  position: relative;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .01);
+  cursor: pointer;
+  
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: -10px;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.9) translateZ(0);
+    filter: blur(15px);
+    background: linear-gradient(to left,
+        #ff5770,
+        #e4428d,
+        #c42da8,
+        #9e16c3,
+        #6501de,
+        #9e16c3,
+        #c42da8,
+        #e4428d,
+        #ff5770);
+    background-size: 200% 200%;
+    animation: animateGlow 1.25s linear infinite;
+  }
+
+  &__btn {
+    width: 20px;
+    &:hover {
+      transform: scale(1.5);
+      transition: 0.5s;
+      background:#ff5770;
+      border-radius: 50px;
+      padding: 8px;
+    }
+  }
+
+  &__editBtn {
+    width: 23px;
+    padding: 7px;
+    border: 1px solid #9e16c3;
+    border-radius: 12px;
+
+    &:hover {
+      transform: scale(1.5);
+      transition: 0.5s;
+      border: 2px solid #6501de ;
+      border-radius: 50px;
+      padding: 6px;
+      background: #dd468c81;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  &__editBtnSave {
+    width: 23px;
+    padding: 7px;
+    border: 1px solid #ff5770;
+    border-radius: 16px;
+    &:hover {
+      transform: scale(1.5);
+      transition: 0.5s;
+      border: 1px solid #6501de ;
+      border-radius: 0px;
+      padding: 2px;
+      background: #ff66ad;
+    }
+  }
+
+  &__edit {
+    border:1px solid black;
+    background-color: black;
+    color:white;
+    padding: 5px;
+    border-radius: 12px;
+  }
+
+  &__checkbox {
+    margin: 5px;
+  }
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
